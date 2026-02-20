@@ -1,0 +1,150 @@
+#card1{
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 8%;
+    flex: auto;
+    background-color: rgb(48, 48, 48);
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(236, 233, 233, 0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(104, 100, 100, 0.781);
+    box-shadow: 2px 3px 5px 0px rgba(14, 13, 13, 0.75);
+}
+
+#card{
+    background-color: rgb(77, 77, 77);
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(236, 233, 233, 0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(104, 100, 100, 0.781);
+    box-shadow: 2px 3px 5px 0px rgba(14, 13, 13, 0.75);
+}
+
+#liking{
+    color: rgb(95, 95, 253);
+}
+
+
+#boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-size: 16px;
+    color: #c531ff;
+    border-radius: 15px;
+    border: 3px double #dd08cb;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(238, 241, 193, 0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(239, 253, 112, 0.75);
+    box-shadow: 2px 3px 5px 0px rgba(255, 254, 240, 0.75);
+  }
+  #boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+
+  #boton_2{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-size: 16px;
+    color: #c209fa;
+    border-radius: 15px;
+    border: 3px double #ffa806;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(238, 241, 193, 0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(253, 192, 112, 0.75);
+    box-shadow: 2px 3px 5px 0px rgba(255, 254, 240, 0.75);
+  }
+  #boton_2:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  #inputmat{
+      color: rgb(2, 4, 7);
+  }
+#inputmat1{
+    color: rgb(149, 194, 233);
+    width: 100%;
+}
+
+  
+.example-full-width{
+  width: 90%;
+  margin-left: 5%;
+}
+.example-container {
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Century Gothic";
+}
+
+.example-is-mobile .example-toolbar {
+  position: absolute;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+.example-toolbar {
+  background-color: #000000; /*bara*/
+}
+h1.example-app-name {
+  margin-left: 41.5%;
+  color: #ec8837;
+  font-size: 65px;
+  font-family: "Century Gothic";
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px rgb(241, 239, 239),
+           0px 4px 1px rgba(0,0,0,0.5),
+           4px 4px 5px rgba(0,0,0,0.7),
+           0px 0px 7px rgba(0,0,0,0.4);
+}
+  .matsnv {
+  background-color: #85725c5e;
+  color: #f9faf7;
+}
+
+
+.example-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+         causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  
+         flex: 1;
+  background: #5d5dbb;
+  background-size: 100%;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+  width: 10px;
+}
+
+.icono {
+  margin-right: 5%;
+}
+
+#button1{
+  margin-right: 2%;
+  margin-left: 20px;
+}
+
+.btn-login-ancho {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Para que el centrado funcione */
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

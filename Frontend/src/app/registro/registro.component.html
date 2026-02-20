@@ -1,0 +1,114 @@
+<div class="example-container">
+
+
+    <mat-toolbar color="" class="example-toolbar">
+        <span class="example-spacer"></span>
+
+        <button style="margin-right: -0.5%; color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Login" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">account_circle</mat-icon>
+        </button>
+        <button style="margin-right: 0.5%;color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Home" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">home</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <mat-card id="card1" fxFlex="200%" fxFlex.sm="100%">
+        <mat-card width="100%" id="card">
+            <h1 style="margin-top: 15px;"><mat-icon aria-hidden="false"
+                    aria-label="Example home icon">account_circle</mat-icon> Sign in</h1>
+        </mat-card>
+        <br>
+        <div *ngIf="authorization === false">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Teléfono">phone</mat-icon>
+                    Enter your Phone
+                </mat-label>
+                <input matInput type="tel" [(ngModel)]="telefono" name="phone" placeholder="555-1234">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="ID Card">badge</mat-icon>
+                    Enter your Id Card
+                </mat-label>
+                <input matInput type="text" [(ngModel)]="idcard" name="idCard" placeholder="123456789">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="wallet">wallet</mat-icon>
+                    Enter your Account
+                </mat-label>
+                <input matInput type="text" [(ngModel)]="address" name="address" placeholder="12345867843">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Monto">attach_money</mat-icon>
+                    Enter Transaction Amount
+                </mat-label>
+                <input matInput type="number" [(ngModel)]="amount" name="amount" placeholder="1000">
+            </mat-form-field>
+        </div>
+        <div *ngIf="authorization === true">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="PIN">lock</mat-icon>
+                    Enter your PIN
+                </mat-label>
+                <input matInput type="password" [(ngModel)]="pin" name="pin" placeholder="****">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Teléfono">phone</mat-icon>
+                    Enter your Phone
+                </mat-label>
+                <input matInput type="tel" [(ngModel)]="telefono" name="phone" placeholder="555-1234">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="ID Card">badge</mat-icon>
+                    Enter your Id Card
+                </mat-label>
+                <input matInput type="text" [(ngModel)]="idcard" name="idCard" placeholder="123456789">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Account">wallz</mat-icon>
+                    Enter your Account
+                </mat-label>
+                <input matInput type="text" [(ngModel)]="address" name="account" placeholder="12345867843">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Monto">attach_money</mat-icon>
+                    Enter Transaction Amount
+                </mat-label>
+                <input matInput type="number" [(ngModel)]="amount" name="amount" placeholder="1000">
+            </mat-form-field>
+        </div>
+
+
+        <br>
+        <br>
+        <div *ngIf="authorization === false">
+            <button mat-raised-button color="accent" class="btn btn-primary btn-login-ancho mt-2" (click)="Register()"
+            type="submit">Autorizacion</button>
+        </div>
+        <div *ngIf="authorization === true">
+            <button mat-raised-button color="accent" class="btn btn-primary btn-login-ancho mt-2" (click)="Transfer()"
+            type="submit">Transferencia</button>
+        </div>
+        
+        <br>
+        <br>
+    </mat-card>
+</div>

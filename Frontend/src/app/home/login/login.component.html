@@ -1,0 +1,49 @@
+<div class="example-container">
+
+
+    <mat-toolbar color="" class="example-toolbar">
+        <span class="example-spacer"></span>
+
+        <button style="margin-right: -0.5%; color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Login" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">account_circle</mat-icon>
+        </button>
+        <button (click)="tablas()" style="margin-right: 0.5%;color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Home" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">table</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <mat-card id="card1" fxFlex="200%" fxFlex.sm="100%">
+        <mat-card width="100%" id="card">
+            <h1 style="margin-top: 15px;"><mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon> Sign in</h1>
+        </mat-card>
+        <br>
+
+        <br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label id="inputmat1"><mat-icon aria-hidden="false"
+                    aria-label="Example home icon">alternate_email</mat-icon> Enter your User</mat-label>
+            <input id="inputmat" matInput [(ngModel)]="user" name="correo" placeholder="juanperez">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label id="inputmat1">Enter your password</mat-label>
+            <input matInput id="inputmat" [(ngModel)]="contra" name="contra" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="primary" class="btn btn-primary btn-login-ancho mt-2" (click)="Login()"
+            type="submit">LOGIN</button>
+        <br>
+        <br>
+    </mat-card>
+</div>

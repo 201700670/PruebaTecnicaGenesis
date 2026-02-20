@@ -1,0 +1,64 @@
+<div class="example-container">
+
+
+    <mat-toolbar color="" class="example-toolbar">
+        <span class="example-spacer"></span>
+
+        <button style="margin-right: -0.5%; color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Login" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">account_circle</mat-icon>
+        </button>
+        <button style="margin-right: 0.5%;color: azure; background-color: rgb(59, 59, 59);" mat-icon-button
+            matTooltip="Home" id="button1" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon style="color: azure;">home</mat-icon>
+        </button>
+    </mat-toolbar>
+
+        <br>
+        <h2>Reporte de Autorizaciones</h2>
+        <table mat-table [dataSource]="autorizaciones" class="mat-elevation-z8">
+            <ng-container matColumnDef="response_code">
+                <th mat-header-cell *matHeaderCellDef> Código </th>
+                <td mat-cell *matCellDef="let row"> {{row.response_code}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="response_message">
+                <th mat-header-cell *matHeaderCellDef> Mensaje </th>
+                <td mat-cell *matCellDef="let row"> {{row.response_message}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="autorization_code">
+                <th mat-header-cell *matHeaderCellDef> Autorización </th>
+                <td mat-cell *matCellDef="let row"> {{row.autorization_code}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['response_code','response_message','autorization_code']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['response_code','response_message','autorization_code'];"></tr>
+        </table>
+
+        <h2>Reporte de Transacciones</h2>
+        <table mat-table [dataSource]="transacciones" class="mat-elevation-z8">
+            <ng-container matColumnDef="strResponseCode">
+                <th mat-header-cell *matHeaderCellDef> Código </th>
+                <td mat-cell *matCellDef="let row"> {{row.strResponseCode}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dblCashAmount">
+                <th mat-header-cell *matHeaderCellDef> Monto </th>
+                <td mat-cell *matCellDef="let row"> {{row.dblCashAmount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="strName">
+                <th mat-header-cell *matHeaderCellDef> Cliente </th>
+                <td mat-cell *matCellDef="let row"> {{row.strName}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['strResponseCode','dblCashAmount','strName']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['strResponseCode','dblCashAmount','strName'];"></tr>
+        </table>
+
+        <br>
+        <br>
+</div>
